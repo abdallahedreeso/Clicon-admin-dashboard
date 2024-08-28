@@ -39,7 +39,7 @@ import supabaseClient from "../backend/supabase/index.js";
         let title = document.createElement('td');
         let total = document.createElement('td');
 
-        totalRow.className = 'bg-white border-b font-semibold text-black hover:bg-gray-50';
+        totalRow.className = 'bg-gray-800 border-b font-semibold text-gray-100 hover:bg-gray-700';
         title.className = 'px-6 py-4 text-lg';
         total.className = 'px-6 py-4';
 
