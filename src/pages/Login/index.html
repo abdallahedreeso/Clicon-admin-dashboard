@@ -1,18 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="shortcut icon"
-      href="../../assets/favicon.webp"
-      type="image/x-icon"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <h1>Login</h1>
-    <a href="../Dashboard/index.html">Dashboard</a>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="../../assets/images/favicon.webp" type="image/x-icon">
+        
+</head>
+
+<body class="bg-gradient-to-r from-[#dc7878] from-10% via-[#9f66dc] via-30% to-[#4a1fe6] to-90% flex items-center justify-center h-screen">
+    <div class="max-w-[960px] bg-black-dark grid grid-cols-2 items-center gap-20 p-5 rounded-2xl">
+        <div class="relative">
+          <img src="../../assets/images/signup-background.svg" alt="" />
+          <img src="../../assets/images/teamwork.svg" alt="" class="absolute top-36" />
+        </div>
+        <div class="max-w-80 grid gap-5">
+            <h1 class="text-5xl font-bold text-white">Login</h1>
+            <p class="text-dull-white">Welcome to clicon</p>
+            <form id="login-form" class="space-y-6 text-white">
+                <div class="relative">
+                    <div class="absolute top-1 left-1 bg-white-medium rounded-full p-2 flex items-center justify-center text-blue-300">
+                        <i class="fa-solid fa-envelope-open"></i>
+                    </div>
+                    <input type="email" id="email" placeholder="Email Address" class="w-80 bg-white-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring focus:ring-neon-blue focus:drop-shadow-lg" title="Please enter a valid Gmail address (e.g., example@gmail.com)" required />
+                </div>
+                <div class="relative">
+                    <div class="absolute top-1 left-1 bg-white-medium rounded-full p-2 flex items-center justify-center text-blue-300">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <input type="password" id="password" placeholder="Password" class="w-80 bg-white-light py-2 px-12 rounded-full focus:bg-black-dark focus:outline-none focus:ring focus:ring-neon-blue focus:drop-shadow-lg" required />
+                </div>
+                <button type="submit" class="bg-gradient-to-r from-cyan-300 to-indigo-600 w-80 font-semibold rounded-full py-2">Sign in</button>
+            </form>
+            <div class="text-dull-white border-t border-white-light pt-4 space-y-4 text-sm">
+                <p>Don't have an account? <a href="../Signup/index.html" class="text-neon-blue font-semibold cursor-pointer">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../../modules/login.js" type="module"></script>
+</body>
+
 </html>
