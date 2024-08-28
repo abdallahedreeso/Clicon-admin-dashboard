@@ -16,7 +16,7 @@ import supabaseClient from "../backend/supabase/index.js"
                 console.error('Signup Error:', error.message);
                 alert('Signup failed. Please try again.');
             } else {
-                await supabaseClient.from('users').insert([{ username, email,password }]);
+                
                 window.location.href = '/src/pages/Login/index.html';
             }
 
