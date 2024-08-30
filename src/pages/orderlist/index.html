@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clicon Dashboard</title>
+    <link rel="shortcut icon" href="../../assets/favicon.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main class="flex p-10 flex-col">
+        <div class="p-4 bg-white shadow rounded-md">
+            <caption >
+                <p class="text-lg font-semibold text-gray-900">Order Management Dashboard
+                </p>
+                <p class="mt-1 text-sm font-normal text-gray-500">
+                    here you can review, accept, or reject customer orders with ease.
+                </p>
+            </caption>
+        </div>        
+        <div class="relative overflow-x-auto w-full h-fit orders-table">
+            <table class="w-full text-sm text-left text-gray-500 font-semibold">
+
+                <thead class="text-xs text-white uppercase bg-blue-600 order-list-header">
+                    <tr class="list-header">
+                        <th scope="col" class="px-6 py-3">
+                            ORDER ID
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            STATUS
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            DATE
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            TOTAL
+                        </th>
+                        <th scope="col" class="flex px-6 py-3 justify-center">
+                            ACTION
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="order-list-body">
+                    <tr class="bg-white border hover:bg-gray-50 order">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 w-1/5">
+                        </th>
+                        <td class="px-6 py-4 text-orange-600 w-1/5 status">
+                        </td>
+                        <td class="px-6 py-4 w-1/5">
+                        </td>
+                        <td class="px-6 py-4 w-1/5">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="relative overflow-x-auto w-full h-fit items-table" hidden>
+            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 active:bg-blue-700 font-medium rounded-full text-sm px-5 py-2.5 text-center mt-2 mb-2 returnBtn">Return</button>
+        
+            <table class="w-full text-sm text-left shadow-md text-gray-500 ">
+                <thead class="text-xs text-white uppercase rounded-lg h-fit bg-blue-600">
+                    <tr>
+                        <th scope="col" class="px-16 py-3">
+                            <span class="sr-only">Image</span>
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Product
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Quantity
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Unit Price
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            sub total
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="items-list-body">
+                    <tr class="bg-white border-b font-semibold text-black  hover:bg-gray-50 items">
+                        <td class="p-4 w-1/5">
+                        </td>
+                        <td class="px-6 py-4 w-1/5">
+                        </td>
+                        <td class="px-6 py-4 w-1/5">
+                        </td>
+                        <td class="px-6 py-4 w-1/5">
+                        </td>
+                        <td class="px-6 py-4">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script type="module" src="../../modules/orderList.js"></script>
+</body>
+
+</html>
